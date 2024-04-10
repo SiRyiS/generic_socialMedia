@@ -26,7 +26,7 @@ This is a simple command line GraphQL API built using Flask and SQLAlchemy for d
 - **populate_data.py**: Script to populate the database with sample data.
 
 ## Example Queries
-
+- **Schema w/ Metadata**:
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Access-Key: 50441f01-8b54-4ea1-a0c1-88c02dd97bc0" --data "{\"query\": \"{ __type(name: \\\"Post\\\") { description fields { name description type { name kind ofType { name kind }}}}}\"}" http://localhost:5000/graphql
 ```
