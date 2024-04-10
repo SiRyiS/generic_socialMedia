@@ -2,7 +2,7 @@
 
 This is a simple command line GraphQL API built using Flask and SQLAlchemy for database interaction. It allows users to create, read, update, and delete posts, comments, and likes.
 
-## Intended VUlnerabilties for testing and demonstration purposes:
+## Intended Vulnerabilties for testing and demonstration purposes:
 - Vulnerabilities lie in the `resolve_posts` and `resolve_user` method of the `User` class. The `access_key` is not implemented before querying the `PostModel` and the check is turned off for the `UserModel`.
 ```python
 [TRUNCATED]
