@@ -1,4 +1,4 @@
-# Flask GraphQL API with SQLAlchemy
+# Generic GraphQl Social Media App
 
 This is a simple command line GraphQL API built using Flask and SQLAlchemy for database interaction. It allows users to create, read, update, and delete posts, comments, and likes.
 
