@@ -1,7 +1,5 @@
-"""
-models.py defines SQLAlchemy models for the app.
-The models are for storing and retrieving user data, posts, comments, and likes.
-"""
+# models.py defines SQLAlchemy models for the app.
+# The models are for storing and retrieving user data.
 
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
