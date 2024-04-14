@@ -1,6 +1,6 @@
-# Generic GraphQl Social Media App
+# Generic GraphQL Social Media App
 
-This is a simple command line GraphQL API built using Flask and SQLAlchemy. You can use it to create, read, update, and delete posts, comments, and likes.
+This is a simple command line graphQL API built using Flask and SQLAlchemy. You can use it to create, read, update, and delete posts, comments, and likes.
 
 ## Intended Vulnerabilties for testing and demonstration purposes:
 - Vulnerabilities lie in the `resolve_posts` and `resolve_user` method of the `User` class. The `access_key` is not implemented before querying the `PostModel` and the check is turned off for the `UserModel`.
@@ -35,14 +35,14 @@ def resolve_user(self, info, id): access_key = info.context.get('access_key')
     python app.py
     ```
 
-3. By default you should be able to access the GraphQL endpoint at `http://localhost:5000/graphql`. Using the command line you can use a tool like `cURL` to execute queries and mutations.
+3. By default you should be able to access the graphQL endpoint at `http://localhost:5000/graphql`. Using the command line you can use a tool like `cURL` or whatever to execute queries and mutations.
 
 ## Project structure should look similar to this:
 
 - **app.py**: Flask application setup and endpoint definition.
 - **models.py**: SQLAlchemy model definitions.
-- **schema.py**: GraphQL schema definition.
-- **populate_data.py**: Script to populate the database with sample data.
+- **schema.py**: graphQL schema definition.
+- **populate_data.py**: script to populate the database with sample data.
 
 ## A few Example Queries
 - **Schema w/ Metadata**:
