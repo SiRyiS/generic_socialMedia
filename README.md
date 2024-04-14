@@ -1,6 +1,6 @@
 # Generic GraphQl Social Media App
 
-This is a simple command line GraphQL API built using Flask and SQLAlchemy for database interaction. It allows users to create, read, update, and delete posts, comments, and likes.
+This is a simple command line GraphQL API built using Flask and SQLAlchemy. You can use it to create, read, update, and delete posts, comments, and likes.
 
 ## Intended Vulnerabilties for testing and demonstration purposes:
 - Vulnerabilities lie in the `resolve_posts` and `resolve_user` method of the `User` class. The `access_key` is not implemented before querying the `PostModel` and the check is turned off for the `UserModel`.
@@ -23,13 +23,13 @@ def resolve_user(self, info, id): access_key = info.context.get('access_key')
 ```
 
 ## Usage
-1. Populate the database with sample data by running the populate_data.py script:
+1. You can populate the database with sample data by running the populate_data.py script:
 
     ```bash
     python populate_data.py
     ```
     
-2. Run the Flask application:
+2. Then run the Flask app:
 
     ```bash
     python app.py
@@ -37,14 +37,14 @@ def resolve_user(self, info, id): access_key = info.context.get('access_key')
 
 3. By default you should be able to access the GraphQL endpoint at `http://localhost:5000/graphql`. Using the command line you can use a tool like `cURL` to execute queries and mutations.
 
-## Structure
+## Structure should look similar to this:
 
 - **app.py**: Flask application setup and endpoint definition.
 - **models.py**: SQLAlchemy model definitions.
 - **schema.py**: GraphQL schema definition.
 - **populate_data.py**: Script to populate the database with sample data.
 
-## Example Queries
+## A few Example Queries
 - **Schema w/ Metadata**:
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Access-Key: 50441f01-8b54-4ea1-a0c1-88c02dd97bc0" --data "{\"query\": \"{ __type(name: \\\"Post\\\") { description fields { name description type { name kind ofType { name kind }}}}}\"}" http://localhost:5000/graphql
