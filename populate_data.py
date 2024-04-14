@@ -1,12 +1,9 @@
-"""
-Script populates a database with dummy user data, creates posts, comments, and likes associated with each user, 
-mimicking user activity on a social media platform.
-"""
+# Script populates a database with dummy user data (posts, comments, and likes) associated with each user.
 
-from app import Session
-from models import User, Post, Comment, Like
 import random
-import uuid 
+import uuid
+from app import Session
+from models import User, Post, Comment, Like 
 
 def create_users(session):
     users_data = [
