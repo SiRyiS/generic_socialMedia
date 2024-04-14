@@ -22,7 +22,7 @@ def resolve_user(self, info, id): access_key = info.context.get('access_key')
 [TRUNCATED]
 ```
 
-## Usage
+## Set up
 1. You can populate the database with sample data by running the populate_data.py script:
 
     ```bash
@@ -44,7 +44,7 @@ def resolve_user(self, info, id): access_key = info.context.get('access_key')
 - **schema.py**: graphQL schema definition.
 - **populate_data.py**: script to populate the database with sample data.
 
-## A few Example Queries
+## A few Example Queries, you play around and figure out more or messsage me.
 - **Schema w/ Metadata**:
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Access-Key: 50441f01-8b54-4ea1-a0c1-88c02dd97bc0" --data "{\"query\": \"{ __type(name: \\\"Post\\\") { description fields { name description type { name kind ofType { name kind }}}}}\"}" http://localhost:5000/graphql
