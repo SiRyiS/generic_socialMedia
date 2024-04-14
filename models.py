@@ -1,3 +1,8 @@
+"""
+models.py defines SQLAlchemy models for the app.
+The models are for storing and retrieving user data, posts, comments, and likes.
+"""
+
 from sqlalchemy import Column, Integer, String, ForeignKey
 from sqlalchemy.orm import relationship
 from sqlalchemy.ext.declarative import declarative_base
