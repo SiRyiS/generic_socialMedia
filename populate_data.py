@@ -1,3 +1,8 @@
+"""
+Script populates a database with dummy user data, creates posts, comments, and likes associated with each user, 
+mimicking user activity on a social media platform.
+"""
+
 from app import Session
 from models import User, Post, Comment, Like
 import random
