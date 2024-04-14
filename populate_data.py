@@ -1,4 +1,4 @@
-# Script populates a database with dummy user data (posts, comments, and likes) associated with each user.
+# Script populates test data (posts, comments, and likes).
 
 import random
 import uuid
