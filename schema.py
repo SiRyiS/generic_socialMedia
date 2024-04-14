@@ -3,10 +3,10 @@
 # Intentional vulnerabilites are included in the resolve_posts method of the User GraphQL object, where access key validation is bypassed for demonstration purposes.
 
 import graphene
+from sqlalchemy import create_engine
 from graphene_sqlalchemy import SQLAlchemyObjectType, SQLAlchemyConnectionField
 from models import User as UserModel, Post as PostModel, Comment as CommentModel, Like as LikeModel
 from models import Base, User, Post, Comment, Like
-from sqlalchemy import create_engine
 
 def validate_access_key(access_key):
     # comparing the access key with a hardcoded value for DEMONSTRATION ONLY!
