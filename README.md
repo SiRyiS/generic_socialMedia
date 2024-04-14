@@ -29,7 +29,7 @@ def resolve_user(self, info, id): access_key = info.context.get('access_key')
     python populate_data.py
     ```
     
-2. Then run the Flask app:
+2. Then run the Flask app, with the otger files in tbe same directory:
 
     ```bash
     python app.py
@@ -37,7 +37,7 @@ def resolve_user(self, info, id): access_key = info.context.get('access_key')
 
 3. By default you should be able to access the GraphQL endpoint at `http://localhost:5000/graphql`. Using the command line you can use a tool like `cURL` to execute queries and mutations.
 
-## Structure should look similar to this:
+## Project structure should look similar to this:
 
 - **app.py**: Flask application setup and endpoint definition.
 - **models.py**: SQLAlchemy model definitions.
