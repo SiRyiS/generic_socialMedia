@@ -1,6 +1,5 @@
-# The schema is used for interacting with a database and GraphQL app.
-# It includes GraphQL types for User, Post, Comment, and Like, along with mutations for creating and deleting posts, comments, and likes.
-# Intentional vulnerabilites are included in the resolve_posts method of the User GraphQL object, where access key validation is bypassed for demonstration purposes.
+# The schema interacts with a database and the app.
+# Intentional vulnerabilites are included in the resolve_posts and access key validation is bypassed for demonstration.
 
 import graphene
 from sqlalchemy import create_engine
