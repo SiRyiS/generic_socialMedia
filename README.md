@@ -37,7 +37,7 @@ def resolve_user(self, info, id): access_key = info.context.get('access_key')
 
 3. By default you should be able to access the GraphQL endpoint at `http://localhost:5000/graphql`. Using the command line you can use a tool like `cURL` to execute queries and mutations.
 
-## Project Structure
+## Structure
 
 - **app.py**: Flask application setup and endpoint definition.
 - **models.py**: SQLAlchemy model definitions.
