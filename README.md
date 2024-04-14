@@ -23,7 +23,7 @@ def resolve_user(self, info, id): access_key = info.context.get('access_key')
 ```
 
 ## Usage
-1. Populate the database with sample data, run the following command:
+1. Populate the database with sample data by running the populate_data.py script:
 
     ```bash
     python populate_data.py
@@ -35,14 +35,13 @@ def resolve_user(self, info, id): access_key = info.context.get('access_key')
     python app.py
     ```
 
-3. Access the GraphQL endpoint at `http://localhost:5000/graphql`. Here you can execute queries and mutations.
-
+3. By default you should be able to access the GraphQL endpoint at `http://localhost:5000/graphql`. Using the command line you can use a tool like `cURL` to execute queries and mutations.
 
 ## Project Structure
 
-- **app.py**: Flask application setup and GraphQL endpoint definition.
-- **models.py**: SQLAlchemy model definitions for User, Post, Comment, and Like.
-- **schema.py**: GraphQL schema definition using Graphene SQLAlchemy.
+- **app.py**: Flask application setup and endpoint definition.
+- **models.py**: SQLAlchemy model definitions.
+- **schema.py**: GraphQL schema definition.
 - **populate_data.py**: Script to populate the database with sample data.
 
 ## Example Queries
