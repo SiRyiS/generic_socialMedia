@@ -12,7 +12,7 @@ app.debug = True
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///mydatabase.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# create engine and database URI
+# engine and database URI
 engine = create_engine('sqlite:///mydatabase.db')
 Base.metadata.create_all(bind=engine)
 
@@ -25,15 +25,14 @@ def shutdown_session(exception=None):
     if session:
         session.close()
 
-# graphqlview class
 class CustomGraphQLView(GraphQLView):
     def dispatch_request(self):
-        access_key = request.headers.get('Access-Key')  # extract access key from request headers
+        access_key = request.headers.get('Access-Key')  # extract access key from headers
         with Session() as session:
             request_json = request.get_json(force=True)
             return self.schema.execute(
                 request_json['query'],
-                context={'session': session, 'access_key': access_key},  # pass access key
+                context={'session': session, 'access_key': access_key},  # pass key
                 variables=request_json.get('variables'),
                 operation_name=request_json.get('operationName')
             ).to_dict()
@@ -42,4 +41,4 @@ class CustomGraphQLView(GraphQLView):
 app.add_url_rule('/graphql', view_func=CustomGraphQLView.as_view('graphql', schema=graphql_schema, graphiql=True))
 
 if __name__ == '__main__':
-    app.run()
+    app.run() # you can specify an IP and port here, example: "app.run(host='0.0.0.0', port=5000)"
