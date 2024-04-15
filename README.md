@@ -60,3 +60,5 @@ curl -X POST -H "Content-Type: application/json" -H "Access-Key: 50441f01-8b54-4
 - **Add a Post**:
 ```bash
 curl -X POST -H "Content-Type: application/json" -H "Access-Key: 50441f01-8b54-4ea1-a0c1-88c02dd97bc0" --data "{\"query\": \"mutation { createComment(postId: 1, content: \\\"This is a new comment11\\\") { comment { id content } } }\"}" http://localhost:5000/graphql```
+
+DON'T contact me about building scraping scripts or bots. I may upload generic versions used to go after this set up for demonstration only eventually.
